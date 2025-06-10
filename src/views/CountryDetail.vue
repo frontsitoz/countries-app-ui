@@ -43,13 +43,14 @@
         <div class="flex flex-col sm:flex-row items-start gap-2">
           <strong>Border Countries:</strong>
           <div class="flex flex-wrap gap-2">
-            <span
+            <router-link
               v-for="border in country.borders"
               :key="border"
-              class="px-4 py-1 text-sm shadow bg-white dark:bg-darkElement rounded"
+              :to="`/country/${border}`"
+              class="px-4 py-1 text-sm shadow bg-white dark:bg-darkElement rounded hover:scale-105 transition"
             >
               {{ getCountryNameByCode(border) }}
-            </span>
+            </router-link>
           </div>
         </div>
       </div>
@@ -60,7 +61,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import countriesData from "../../data.json";
 import type { Country } from "../types/Country";
@@ -81,6 +82,19 @@ onMounted(() => {
     router.push("/");
   }
 });
+watch(
+  () => route.params.code,
+  (newCode) => {
+    const match = (countriesData as Country[]).find(
+      (c) => c.alpha3Code === newCode
+    );
+    if (match) {
+      country.value = match;
+    } else {
+      router.push("/");
+    }
+  }
+);
 
 const currencies = computed(() =>
   country.value?.currencies?.map((c) => c.name).join(", ")
