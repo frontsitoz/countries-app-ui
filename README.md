@@ -24,7 +24,7 @@ Built as part of the [Frontend Mentor Challenge](https://www.frontendmentor.io/c
 ### 📱 Mobile Responsive View
 
 <div align="center">
-  <img src="./src/assets/main_page_mode_dark.png" alt="Mobile view" width="600"/>
+  <img src="./src/assets/main_page_mode_dark.png" alt="Mobile view" width="300"/>
 </div>
 
 ---
