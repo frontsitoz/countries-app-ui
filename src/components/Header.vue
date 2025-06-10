@@ -1,16 +1,12 @@
 <template>
   <header
-    class="w-full bg-white dark:bg-gray-800 shadow px-6 py-4 flex justify-between items-center"
+    class="w-full shadow px-6 py-4 bg-white dark:bg-darkElement flex justify-between items-center"
   >
-    <h1 class="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
+    <h1 class="font-bold text-base sm:text-lg text-lightText dark:text-white">
       Where in the world?
     </h1>
-
-    <button
-      @click="toggleDark"
-      class="flex items-center gap-2 text-sm sm:text-base text-gray-800 dark:text-white hover:underline"
-    >
-      <span v-if="isDark">☀️ Light Mode</span>
+    <button @click="toggleDark" class="text-lightText dark:text-white text-sm">
+      <span v-if="isDark">🌞 Light Mode</span>
       <span v-else>🌙 Dark Mode</span>
     </button>
   </header>
@@ -18,8 +14,8 @@
 
 <script setup lang="ts">
 import { inject } from "vue";
+import type { Ref } from "vue";
 
-// `isDark` y `toggleDark` vienen de App.vue o del estado global
-const isDark = inject("isDark") as any;
+const isDark = inject("isDark") as Ref<boolean>;
 const toggleDark = inject("toggleDark") as () => void;
 </script>
