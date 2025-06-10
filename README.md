@@ -9,21 +9,13 @@ Built as part of the [Frontend Mentor Challenge](https://www.frontendmentor.io/c
 
 ## 🖼️ Preview
 
-### 🏠 Home – Light Mode
-
-![Light mode](./src/assets/home_light.png)
-
 ### 🌙 Home – Dark Mode
 
-![Dark mode](./src/assets/home_dark.png)
+<img src="./src/assets/home_dark.png" alt="Dark mode" width="600"/>
 
 ### 📄 Country Detail
 
-![Country detail view](./src/assets/info_countries_light.png)
-
-### 📱 Mobile Responsive View
-
-![Mobile view](./src/assets/main_page_mode_dark.png)
+<img src="./src/assets/info_countries_light.png" alt="Detail" width="600"/>
 
 ---
 
@@ -54,17 +46,10 @@ Built as part of the [Frontend Mentor Challenge](https://www.frontendmentor.io/c
 src/
 ├── assets/
 ├── components/
-│ └── CountryCard.vue
-├── views/
-│ └── CountryDetail.vue
-├── models/
-│ └── country.model.ts
 ├── router/
-│ └── index.ts
-├── utils/
-│ └── axios.ts
-├── App.vue
-└── main.ts
+├── types/
+├── views/
+
 \`\`\`
 
 ---
