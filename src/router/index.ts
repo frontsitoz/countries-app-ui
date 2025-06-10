@@ -4,11 +4,12 @@ import CountryDetail from '../views/CountryDetail.vue';
 
 
 const routes = [
-  { path: '/', component: HomeView },
-  { path: '/country/:code', component: CountryDetail },
+  { path: '/', name: 'Home', component: HomeView },
+  { path: '/country/:code', name:'CountryDetail',component: CountryDetail },
 ];
-
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+export default router;
