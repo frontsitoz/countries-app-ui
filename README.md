@@ -11,11 +11,21 @@ Built as part of the [Frontend Mentor Challenge](https://www.frontendmentor.io/c
 
 ### 🌙 Home – Dark Mode
 
-<img src="./src/assets/home_dark.png" alt="Dark mode" width="600"/>
+<div align="center">
+  <img src="./src/assets/home_dark.png" alt="Dark mode" width="600"/>
+</div>
 
 ### 📄 Country Detail
 
-<img src="./src/assets/info_countries_light.png" alt="Detail" width="600"/>
+<div align="center">
+  <img src="./src/assets/info_countries_light.png" alt="Detail view" width="600"/>
+</div>
+
+### 📱 Mobile Responsive View
+
+<div align="center">
+  <img src="./src/assets/main_page_mode_dark.png" alt="Mobile view" width="600"/>
+</div>
 
 ---
 
@@ -42,39 +52,33 @@ Built as part of the [Frontend Mentor Challenge](https://www.frontendmentor.io/c
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 src/
 ├── assets/
 ├── components/
+├── views/
 ├── router/
 ├── types/
-├── views/
-
-\`\`\`
+```
 
 ---
 
 ## 🛠️ Setup & Run Locally
 
-\`\`\`bash
-
+```bash
 # 1. Clona el repositorio
-
 git clone https://github.com/frontsitoz/countries-app-ui.git
 cd countries-app-ui
 
 # 2. Instala dependencias
-
 npm install
 
 # 3. Corre en desarrollo
-
 npm run dev
 
 # 4. Genera build para producción
-
 npm run build
-\`\`\`
+```
 
 ---
 
@@ -82,9 +86,9 @@ npm run build
 
 This project uses [REST Countries API v3.1](https://restcountries.com/) with `?fields=` query parameters to request only the necessary data:
 
-\`\`\`ts
+```ts
 GET /all?fields=name,flags,capital,population,region
-\`\`\`
+```
 
 ---
 
@@ -96,5 +100,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## ✨ Author
 
-Desarrollado por **[Alvaro Prado]**  
+Desarrollado por **Alvaro Prado**  
 🔗 [LinkedIn](https://www.linkedin.com/in/alvaro-prado-tenorio/)
